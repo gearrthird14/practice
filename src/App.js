@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import styles from './app.module.scss';
+
+// Components
+import SecondVenue from './components/secondVenue';
+import InnerVenue from './components/innerVenue/innerVenue'
 
 function App() {
+  const [showNav, setShowNav] = useState(false);
+  const [current, setCurrent] = useState('');
+  const prp = {
+    current,
+    setCurrent,
+    showNav,
+    setShowNav,
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <SecondVenue {...prp} />
+      <InnerVenue {...prp} />
     </div>
   );
 }

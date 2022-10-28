@@ -1,0 +1,42 @@
+.main_Container {
+  width: 1000px;
+  height: 70px;
+  background: linear-gradient(180deg, #f2f8fc, #E9F2F9, #DFECF6 );
+  border-radius: 0 0 80px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+	.SecondVenue {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 10;
+		height: 50px;
+		.SecondVenueList {
+			margin: 0 0 0 10px;
+			width: 100px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			&:last-child {
+				margin: 0 10px;
+			}
+			&:hover {
+				color: white;
+				background: red;
+				border-radius: 10px;
+			}
+			.SecondVenueNames {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				width: 1200px;	
+			}
+		}
+	}
+}
